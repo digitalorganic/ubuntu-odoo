@@ -16,7 +16,7 @@ jobs:
           
       - name: Build and run Docker Compose services
         run: |
-          docker compose build ubuntu
+          docker-compose build ubuntu
 
       # - name: Push docker image
       #   run: | 
