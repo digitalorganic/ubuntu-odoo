@@ -10,15 +10,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Docker Compose
-        run: |
-          sudo apt-get update && sudo apt-get install -y docker-compose
-          
-      - name: Build and run Docker Compose services
-        run: |
-          docker-compose build ubuntu
-
-      # - name: Push docker image
-      #   run: | 
-      #     echo ${{secrets.REG_TOKEN}} | docker login -u ${{secrets.REG_USER}} --password-stdin ${{secrets.REG_URL}}
-      #     docker-compose -f docker-compose.build.yml push
+      - name: Build
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          tags: digitalorganic/ubuntu-odoo:6.1
