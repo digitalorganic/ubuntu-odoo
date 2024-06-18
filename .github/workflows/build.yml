@@ -1,4 +1,4 @@
-run-name: ${{ gitea.actor }} Docker Image CI 🚀
+run-name: ${{ github.actor }} Docker Image CI 🚀
 
 on: [push]
 
