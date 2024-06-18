@@ -25,7 +25,7 @@ RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula \
 RUN apt-get install --no-install-recommends -y -q \
     ttf-mscorefonts-installer  ttf-dejavu-core fonts-thai-tlwg 
 
-# extra lib for odbc
+# dremio extra lib for odbc
 ENV DRIVER_VERSION=1.5.4.1002
 RUN apt-get update && apt-get install -y --no-install-recommends alien unixodbc unixodbc-dev &&\
     wget "https://fileserv.do.co.th/static/files/dremio/2022/dremio-odbc-${DRIVER_VERSION}-1.x86_64.rpm" -O /dremio-odbc-${DRIVER_VERSION}-1.x86_64.rpm &&\

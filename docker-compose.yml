@@ -1,0 +1,8 @@
+
+version: "3"
+services:
+  ubuntu:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: digitalorganic/ubuntu-odoo:6.1
