@@ -1,4 +1,4 @@
-; odoo server base requirements
+# odoo server base requirements
 
 Babel==2.6.0
 certifi==2019.9.11
@@ -32,6 +32,6 @@ dremio-client==0.13.6
 honcho==1.0.1
 python-ldap
 
-; extra
+# extra
 progressbar2
 pyodbc
