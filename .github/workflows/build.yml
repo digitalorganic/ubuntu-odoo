@@ -16,9 +16,16 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build
+      - name: Build 6.1
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
           tags: digitalorganic/ubuntu-odoo:6.1
+      
+      # - name: Build odoo  5.0
+      #   uses: docker/build-push-action@v6
+      #   with:
+      #     context: .
+      #     push: true
+      #     tags: digitalorganic/ubuntu-odoo:5.0
